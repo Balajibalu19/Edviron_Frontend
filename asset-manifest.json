@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Edviron_Frontend/static/css/main.5b890694.css",
+    "main.js": "/Edviron_Frontend/static/js/main.d9f0f4c4.js",
+    "index.html": "/Edviron_Frontend/index.html",
+    "main.5b890694.css.map": "/Edviron_Frontend/static/css/main.5b890694.css.map",
+    "main.d9f0f4c4.js.map": "/Edviron_Frontend/static/js/main.d9f0f4c4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5b890694.css",
+    "static/js/main.d9f0f4c4.js"
+  ]
+}
