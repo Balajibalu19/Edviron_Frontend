@@ -35,16 +35,12 @@ Copy code
 npm install
  or
 yarn install
-Create a .env file in the root directory and add the following environment variables:
+# Create a .env file in the root directory and add the following environment variables:
 
-env
-Copy code
-REACT_APP_API_URL=<your-api-url>
-Running the Application
+ REACT_APP_API_URL=<your-api-url>
+# Running the Application
 # Start the development server:
 
-bash
-Copy code
 npm start
  or
 yarn start
