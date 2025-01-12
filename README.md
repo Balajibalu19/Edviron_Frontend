@@ -41,11 +41,11 @@ env
 Copy code
 REACT_APP_API_URL=<your-api-url>
 Running the Application
-Start the development server:
+# Start the development server:
 
 bash
 Copy code
 npm start
  or
 yarn start
-The application will be available at http://localhost:3000
+# The application will be available at http://localhost:3000
