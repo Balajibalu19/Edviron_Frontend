@@ -2,4 +2,4 @@
 
 https://github.com/Balajibalu19/Edviron_Frontend
 
-
+# npm install 
