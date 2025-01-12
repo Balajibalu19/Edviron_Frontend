@@ -52,7 +52,7 @@ yarn start
 
 # Clone the backend Repo in VS Code 
 
-
+    https://github.com/Balajibalu19/Edviron_Backend
 
 # Transaction Management Backend
 This backend application is designed to manage schools and transactions, providing APIs to fetch and manage transaction and school data.
@@ -70,7 +70,7 @@ MongoDB (local or cloud instance)
 Installation
 Clone the repository:
 
-    git clone <repository-url>
+    git clone https://github.com/Balajibalu19/Edviron_Backend
     cd <repository-folder>
 # Install dependencies:
 
