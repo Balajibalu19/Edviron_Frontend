@@ -1,14 +1,14 @@
-Frontend Application
-Project Overview
+# Frontend Application
+# Project Overview
 This is a React-based frontend application designed to provide a user-friendly interface for transaction management. It includes features such as filtering, searching, and paginated displays, with enhanced functionalities like copying IDs.
 
-Features
+# Features
 Dynamic Routing: Implemented using HashRouter for compatibility with static hosting.
 Transaction Overview: Displays transaction details with filtering, searching, and pagination.
 Interactive UI: Copy school IDs and intuitive hover effects.
 Responsive Design: Optimized for various screen sizes.
 Modern Tech Stack: React, Axios, TailwindCSS.
-Tech Stack
+# Tech Stack
 Frontend Framework: React.js (TypeScript)
 Styling: Tailwind CSS
 Routing: React Router (HashRouter)
@@ -16,7 +16,7 @@ HTTP Requests: Axios
 Getting Started
 Follow the instructions below to set up and run the application locally.
 
-Prerequisites
+# Prerequisites
 Ensure you have the following installed:
 
 Node.js (v16 or higher)
@@ -33,7 +33,7 @@ Install dependencies:
 bash
 Copy code
 npm install
-# or
+ or
 yarn install
 Create a .env file in the root directory and add the following environment variables:
 
@@ -46,6 +46,6 @@ Start the development server:
 bash
 Copy code
 npm start
-# or
+ or
 yarn start
 The application will be available at http://localhost:3000
