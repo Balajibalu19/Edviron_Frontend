@@ -70,11 +70,11 @@ MongoDB (local or cloud instance)
 Installation
 Clone the repository:
 
-git clone <repository-url>
-cd <repository-folder>
+    git clone <repository-url>
+    cd <repository-folder>
 # Install dependencies:
 
-npm install
+    npm install
 
 Configure environment variables:
 
@@ -89,7 +89,7 @@ Replace <your-database-name> with your desired MongoDB database name.
 mongod
 # Running the Application
  # Start the server:
-   npm start
+    nodemon index.js
  # Access the application in your browser or API testing tool (e.g., Postman) at:
 
 http://localhost:5002
