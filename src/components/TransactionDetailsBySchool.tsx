@@ -1,14 +1,19 @@
-import axios from 'axios';
-import React, { useState } from 'react';
+import axios from "axios";
+import React, { useState } from "react";
 
 interface Transaction {
   _id: string;
-  transaction_amount: number;
+  collect_id?: string;
+  school_id?: string;
+  gateway?: string;
+  order_amount?: number;
+  transaction_amount?: number;
   status: string;
+  custom_order_id?: string;
 }
 
 const TransactionDetailsBySchool: React.FC = () => {
-  const [schoolId, setSchoolId] = useState<string>('');
+  const [schoolId, setSchoolId] = useState<string>("");
   const [transactions, setTransactions] = useState<Transaction[]>([]);
 
   const fetchTransactions = async () => {
@@ -19,13 +24,15 @@ const TransactionDetailsBySchool: React.FC = () => {
       setTransactions(response.data);
       console.log(response.data);
     } catch (error) {
-      console.error('Error fetching transactions by school:', error);
+      console.error("Error fetching transactions by school:", error);
     }
   };
 
   return (
     <div className="p-8 bg-gray-50 min-h-screen">
-      <h1 className="text-3xl font-semibold text-gray-800 mb-6">Transaction Details by School</h1>
+      <h1 className="text-3xl font-semibold text-gray-800 mb-6">
+        Transaction Details by School
+      </h1>
       <div className="flex items-center mb-6">
         <input
           type="text"
@@ -58,31 +65,41 @@ const TransactionDetailsBySchool: React.FC = () => {
           {transactions.length > 0 ? (
             transactions.map((transaction) => (
               <tr
-  key={transaction.collect_id}
-  className="hover:bg-gray-100 transform hover:scale-105 transition-transform duration-300 ease-in-out"
->
-  <td className="border-t px-9 py-3">{transaction.collect_id}</td>
-  <td className="border-t px-6 py-3">{transaction.school_id}</td>
-  <td className="border-t px-6 py-3">{transaction.gateway}</td>
-  <td className="border-t px-6 py-3">${transaction.order_amount.toFixed(2)}</td>
-  <td className="border-t px-6 py-3">${transaction.transaction_amount.toFixed(2)}</td>
-  <td className="border-t px-6 py-3">
-    <span
-      className={`px-3 py-2 text-sm font-medium rounded ${
-        transaction.status === 'SUCCESS'
-          ? 'bg-green-100 text-green-700'
-          : transaction.status === 'PENDING'
-          ? 'bg-yellow-100 text-yellow-700'
-          : 'bg-red-100 text-red-700'
-      }`}
-    >
-      {transaction.status}
-    </span>
-  </td>
-  <td className="border-t px-6 py-3">{transaction.custom_order_id}</td>
-</tr>
-
-
+                key={transaction._id}
+                className="hover:bg-gray-100 transform hover:scale-105 transition-transform duration-300 ease-in-out"
+              >
+                <td className="border-t px-9 py-3">
+                  {transaction.collect_id ?? "N/A"}
+                </td>
+                <td className="border-t px-6 py-3">
+                  {transaction.school_id ?? "N/A"}
+                </td>
+                <td className="border-t px-6 py-3">
+                  {transaction.gateway ?? "N/A"}
+                </td>
+                <td className="border-t px-6 py-3">
+                  ${(transaction.order_amount ?? 0).toFixed(2)}
+                </td>
+                <td className="border-t px-6 py-3">
+                  ${(transaction.transaction_amount ?? 0).toFixed(2)}
+                </td>
+                <td className="border-t px-6 py-3">
+                  <span
+                    className={`px-3 py-2 text-sm font-medium rounded ${
+                      transaction.status === "SUCCESS"
+                        ? "bg-green-100 text-green-700"
+                        : transaction.status === "PENDING"
+                        ? "bg-yellow-100 text-yellow-700"
+                        : "bg-red-100 text-red-700"
+                    }`}
+                  >
+                    {transaction.status}
+                  </span>
+                </td>
+                <td className="border-t px-6 py-3">
+                  {transaction.custom_order_id ?? "N/A"}
+                </td>
+              </tr>
             ))
           ) : (
             <tr>
