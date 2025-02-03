@@ -157,3 +157,21 @@ Response:
 {
   "message": "Status updated successfully"
 }
+
+
+
+
+
+# Deployment Issues
+
+## Deployment Issues on Netlify, Heroku, Vercel 
+
+
+1. Deployment Fails with "Build Command Failed"
+
+
+Problem:
+
+  The deployment fails with an error indicating that the build command failed, usually seen as:
+
+   Build command failed. Check the build logs for details.
