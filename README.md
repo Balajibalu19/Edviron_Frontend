@@ -70,7 +70,7 @@ This is a Transaction Management Application that provides an overview of transa
 
 1. Transaction Overview
 
-
+![Image](https://github.com/user-attachments/assets/39b2582d-d70f-4e14-98b4-7e8bc8118118)
 
 2. Details by School
 
