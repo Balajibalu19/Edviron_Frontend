@@ -1,70 +1,159 @@
-# Getting Started with Create React App
+## Transaction Management Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a Transaction Management Application that provides an overview of transactions, details by school, and transaction status checks. The project is built with a MERN (MongoDB, Express, React, Node.js) stack.
 
-## Available Scripts
+🚀 Features
 
-In the project directory, you can run:
+1. Transaction Overview: View a summary of all transactions.
 
-### `npm start`
+2. Details by School: Check transactions filtered by specific schools.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. Status Check: Verify the status of transactions.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4. Responsive UI: Optimized for both desktop and mobile devices.
 
-### `npm test`
+🛠️ Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Frontend: React, React Router DOM, Tailwind CSS
 
-### `npm run build`
+2. Backend: Node.js, Express.js
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Database: MongoDB
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Middleware: CORS, Body-Parser
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+5. Environment: dotenv
 
-### `npm run eject`
+⚙️ Prerequisites
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Node.js (v14+)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. MongoDB (Ensure MongoDB is running locally or provide a cloud database URI)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. npm or yarn
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Backend Setup
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Clone Repository:
 
-### Code Splitting
+       git clone https://github.com/Balajibalu19/Edviron_Backend.git
+       cd .\edviron\
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. Install Dependencies:
 
-### Analyzing the Bundle Size
+       npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. Run Backend Server:
 
-### Making a Progressive Web App
+       node index.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Frontend Setup
 
-### Advanced Configuration
+1. Clone Repository:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+       git clone https://github.com/Balajibalu19/Edviron_Frontend.git
+       cd edviron_frontend
 
-### Deployment
+2. Install Dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+       npm install
 
-### `npm run build` fails to minify
+3. Run Frontend:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+       npm start
+
+
+
+📸 Screenshots
+
+1. Transaction Overview
+
+![Image](https://github.com/user-attachments/assets/39b2582d-d70f-4e14-98b4-7e8bc8118118)
+
+2. Details by School
+
+
+![Image](https://github.com/user-attachments/assets/87b901f6-2f22-4086-8129-a1ce351546d4)
+
+
+4. Status Check
+
+
+![Image](https://github.com/user-attachments/assets/54b952b0-eb6b-4cde-85f0-9e4e24654e1f)
+
+
+# 📡 API Endpoints
+
+GET / — Health check: Returns "Server is up and running!"
+
+/api/transactions — Handles transaction-related operations (CRUD)
+
+
+
+# API Documentation
+
+## 1. Fetch All Transactions
+
+Endpoint: GET /api/transactions
+
+Response Example:
+
+[
+  {
+    "collect_id": "001",
+    "school_id": "S123",
+    "gateway": "Stripe",
+    "order_amount": 1000,
+    "transaction_amount": 950,
+    "status": "Success",
+    "custom_order_id": "TXN001"
+  }
+]
+
+## 2. Fetch Transactions by School
+
+Endpoint: GET /api/transactions/school/:school_id
+
+Response Example:
+
+[
+  {
+    "collect_id": "002",
+    "school_id": "S456",
+    "gateway": "PayPal",
+    "order_amount": 1200,
+    "transaction_amount": 1180,
+    "status": "Pending",
+    "custom_order_id": "TXN002"
+  }
+]
+
+## 3. Transaction Status Check
+
+Endpoint: GET /api/transactions/status/:custom_order_id
+
+Response Example:
+
+{
+  "custom_order_id": "TXN001",
+  "status": "Success"
+}
+
+## 4. Webhook for Status Updates
+
+Endpoint: POST /api/webhook
+
+Request Body:
+
+{
+  "custom_order_id": "TXN003",
+  "status": "Failed"
+}
+
+Response:
+
+{
+  "message": "Status updated successfully"
+}
