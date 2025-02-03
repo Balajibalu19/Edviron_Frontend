@@ -73,7 +73,7 @@ This is a Transaction Management Application that provides an overview of transa
 ![Image](https://github.com/user-attachments/assets/39b2582d-d70f-4e14-98b4-7e8bc8118118)
 
 2. Details by School
-
+![Image](https://github.com/user-attachments/assets/87b901f6-2f22-4086-8129-a1ce351546d4)
 
 
 3. Status Check   
