@@ -1,112 +1,79 @@
-# Frontend Application
-# Project Overview
-This is a React-based frontend application designed to provide a user-friendly interface for transaction management. It includes features such as filtering, searching, and paginated displays, with enhanced functionalities like copying IDs.
+## Transaction Management Application
 
-# Features
-Dynamic Routing: Implemented using HashRouter for compatibility with static hosting.
-Transaction Overview: Displays transaction details with filtering, searching, and pagination.
-Interactive UI: Copy school IDs and intuitive hover effects.
-Responsive Design: Optimized for various screen sizes.
-Modern Tech Stack: React, Axios, TailwindCSS.
-# Tech Stack
-Frontend Framework: React.js (TypeScript)
-Styling: Tailwind CSS
-Routing: React Router (HashRouter)
-HTTP Requests: Axios
-Getting Started
-Follow the instructions below to set up and run the application locally.
+This is a Transaction Management Application that provides an overview of transactions, details by school, and transaction status checks. The project is built with a MERN (MongoDB, Express, React, Node.js) stack.
 
-# Prerequisites
-Ensure you have the following installed:
+🚀 Features
 
-Node.js (v16 or higher)
-npm or yarn
-Installation
-Clone the repository:
+1. Transaction Overview: View a summary of all transactions.
 
-bash
-Copy code
-git clone <repository-url>
-cd <repository-folder>
-Install dependencies:
+2. Details by School: Check transactions filtered by specific schools.
 
-bash
-Copy code
-npm install
- or
-yarn install
-# Create a .env file in the root directory and add the following environment variables:
+3. Status Check: Verify the status of transactions.
 
- REACT_APP_API_URL=<your-api-url>
-# Running the Application
-# Start the development server:
+4. Responsive UI: Optimized for both desktop and mobile devices.
 
-npm start
- or
-yarn start
-# The application will be available at http://localhost:3000 
+🛠️ Technologies Used
+
+1. Frontend: React, React Router DOM, Tailwind CSS
+
+2. Backend: Node.js, Express.js
+
+3. Database: MongoDB
+
+4. Middleware: CORS, Body-Parser
+
+5. Environment: dotenv
+
+⚙️ Prerequisites
+
+1. Node.js (v14+)
+
+2. MongoDB (Ensure MongoDB is running locally or provide a cloud database URI)
+
+3. npm or yarn
 
 
 
-# Backend
+## Backend Setup
 
-# Clone the backend Repo in VS Code 
+1. Clone Repository:
 
-    https://github.com/Balajibalu19/Edviron_Backend
+       git clone [Backend Repo URL]
+       cd backend
 
-# Transaction Management Backend
-This backend application is designed to manage schools and transactions, providing APIs to fetch and manage transaction and school data.
+2. Install Dependencies:
 
-# Features
-RESTful APIs to manage and fetch transactions and school details.
-Supports CRUD operations for transactions and school entities.
-Filters transactions by school_id, custom_order_id, or general transaction listing.
-MongoDB for persistent data storage.
-# Prerequisites
-# Before running this application, ensure you have the following installed:
+       npm install
 
-Node.js (v14 or later recommended)
-MongoDB (local or cloud instance)
-Installation
-Clone the repository:
+3. Run Backend Server:
 
-    git clone https://github.com/Balajibalu19/Edviron_Backend
-    cd <repository-folder>
-# Install dependencies:
+       npm run start
 
-    npm install
+## Frontend Setup
 
-Configure environment variables:
+1. Clone Repository:
 
-Create a .env file in the project root and configure the following variables:
+       git clone [Frontend Repo URL]
+       cd frontend
 
-PORT=5002
-MONGO_URI=mongodb://localhost:27017/<your-database-name>
-Replace <your-database-name> with your desired MongoDB database name.
+2. Install Dependencies:
 
-# Start the MongoDB server (if using a local instance):
+       npm install
 
-mongod
-# Running the Application
- # Start the server:
-    nodemon index.js
- # Access the application in your browser or API testing tool (e.g., Postman) at:
+3. Run Frontend:
 
-http://localhost:5002
- # API Endpoints
-    General Routes
-    GET /
-    Returns a confirmation that the server is running.
-    Transactions API
-    GET /api/transactions
-    Fetches all transactions with associated school details.
-    
-    GET /api/transactions/school/:school_id
-    Fetches all transactions for a specific school by school_id.
-    
-    GET /api/transactions/check-status
-    Fetches the status of a transaction using custom_order_id.
-    
-    Query Parameters:
-    
-    custom_order_id (required): The custom order ID to check the transaction status. 
+       npm start
+
+
+
+📸 Screenshots
+
+1. Transaction Overview
+
+
+
+2. Details by School
+
+
+
+3. Status Check   
