@@ -53,8 +53,8 @@ This is a Transaction Management Application that provides an overview of transa
 
 1. Clone Repository:
 
-       git clone 
-       cd frontend
+       git clone https://github.com/Balajibalu19/Edviron_Frontend.git
+       cd edviron_frontend
 
 2. Install Dependencies:
 
