@@ -38,8 +38,8 @@ This is a Transaction Management Application that provides an overview of transa
 
 1. Clone Repository:
 
-       git clone [Backend Repo URL]
-       cd backend
+       git clone https://github.com/Balajibalu19/Edviron_Backend.git
+       cd .\edviron\
 
 2. Install Dependencies:
 
@@ -47,13 +47,13 @@ This is a Transaction Management Application that provides an overview of transa
 
 3. Run Backend Server:
 
-       npm run start
+       node index.js
 
 ## Frontend Setup
 
 1. Clone Repository:
 
-       git clone [Frontend Repo URL]
+       git clone 
        cd frontend
 
 2. Install Dependencies:
